@@ -1,0 +1,14 @@
+.idea/
+.vscode/
+.jshintrc
+.dockerignore
+.gitignore
+.tscache
+tslint.json
+tsconfig.json
+Gruntfile.js
+Dockerfile
+node_modules
+test
+src/**/*.ts
+src/**/*.map

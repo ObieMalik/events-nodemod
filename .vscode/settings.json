@@ -1,0 +1,33 @@
+{
+    "eslint.enable": false,
+    "typescript.tsdk": "./node_modules/typescript/lib",
+	"editor.insertSpaces": false,
+	"editor.roundedSelection": false,
+	"typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyParenthesis": true,
+	"typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": true,
+	"editor.formatOnType": true,
+	// Place your settings in this file to overwrite the default settings
+    "workbench.statusBar.visible": true,
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/.DS_Store": true,
+        "**/*.js.map": true,
+        "**/*.js": false
+        //"**/*.js": {"when": "$(basename).ts"}
+	},
+    "window.zoomLevel": 0,
+    "workbench.colorTheme": "GitHub Plus",
+    "workbench.iconTheme": "vs-seti",
+    "editor.cursorStyle": "block",
+	"workbench.activityBar.visible": true,
+    "editor.minimap.enabled": false,
+    "line-counter.excludes": [
+        "**/.vscode/**",
+        "**/.tscache/**",
+        "**/.idea/**",
+        "**/build/**",
+        "**/node_modules/**"
+    ]
+}

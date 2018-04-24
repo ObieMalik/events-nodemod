@@ -1,0 +1,37 @@
+{
+  "name": "@bazook/events",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "src"
+  },
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "dist"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@bazook/errors": "file:../errors/bazook-errors-1.0.0.tgz",
+    "config": "^1.30.0",
+    "events": "^2.0.0",
+    "lodash": "^4.17.5"
+  },
+  "devDependencies": {
+    "@types/config": "0.0.31",
+    "@types/events": "^1.2.0",
+    "@types/lodash": "^4.14.107",
+    "grunt": "^1.0.2",
+    "grunt-contrib-jshint": "^1.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-ts": "^6.0.0-beta.17",
+    "grunt-tslint": "^4.0.0",
+    "tslint": "^4.3.1",
+    "typescript": "^2.7.2"
+  }
+}
