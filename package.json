@@ -13,6 +13,7 @@
   "license": "ISC",
   "dependencies": {
     "@bazook/errors": "https://obiemalik@bitbucket.org/bazook/errors.git",
+    "@bazook/logger": "https://obiemalik@bitbucket.org/bazook/logger.git",
     "config": "^1.30.0",
     "events": "^2.0.0",
     "lodash": "^4.17.5"

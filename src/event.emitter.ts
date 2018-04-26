@@ -1,17 +1,16 @@
 import * as Events from 'events';
 
-export class EventEmitter extends Events.EventEmitter {
-    private static _instance: EventEmitter;
+class GlobalEmitter {
+    
+    private static _instance: Events.EventEmitter;
 
-    private constructor() {
-        super();
-        EventEmitter._instance = this;
-    }
-
-    public static get instance(): EventEmitter {
-        if ( !EventEmitter._instance ) {
-            EventEmitter._instance = new EventEmitter();
+    public static get instance(): Events.EventEmitter {
+        if ( !GlobalEmitter._instance ) {
+            GlobalEmitter._instance = new Events.EventEmitter();
         }
-        return EventEmitter._instance;
+        return GlobalEmitter._instance;
     }
+
 }
+
+export const EventEmitter = GlobalEmitter.instance

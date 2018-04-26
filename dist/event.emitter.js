@@ -1,17 +1,13 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const Events = require("events");
-class EventEmitter extends Events.EventEmitter {
-    constructor() {
-        super();
-        EventEmitter._instance = this;
-    }
+class GlobalEmitter {
     static get instance() {
-        if (!EventEmitter._instance) {
-            EventEmitter._instance = new EventEmitter();
+        if (!GlobalEmitter._instance) {
+            GlobalEmitter._instance = new Events.EventEmitter();
         }
-        return EventEmitter._instance;
+        return GlobalEmitter._instance;
     }
 }
-exports.EventEmitter = EventEmitter;
+exports.EventEmitter = GlobalEmitter.instance;
 //# sourceMappingURL=event.emitter.js.map

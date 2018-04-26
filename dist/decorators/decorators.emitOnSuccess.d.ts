@@ -1,2 +1,3 @@
 import '@bazook/errors';
-export declare function EmitOnSuccess(event: string, includeArgs?: boolean): any;
+import '@bazook/logger';
+export declare function EmitOnSuccess(event: string, includeArgs?: boolean, data?: any): any;
