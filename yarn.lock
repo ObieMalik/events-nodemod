@@ -2,13 +2,13 @@
 # yarn lockfile v1
 
 
-"@bazook/errors@https://obiemalik@bitbucket.org/bazook/errors.git":
+"@bazook/errors@git+ssh://git@bitbucket.org/bazook/errors.git":
   version "1.0.0"
-  resolved "https://obiemalik@bitbucket.org/bazook/errors.git#817afade3b663e7ddadf44ae70e431fb4adb06c0"
+  resolved "git+ssh://git@bitbucket.org/bazook/errors.git#817afade3b663e7ddadf44ae70e431fb4adb06c0"
 
-"@bazook/logger@https://obiemalik@bitbucket.org/bazook/logger.git":
+"@bazook/logger@git+ssh://git@bitbucket.org/bazook/logger.git":
   version "1.0.0"
-  resolved "https://obiemalik@bitbucket.org/bazook/logger.git#a876b23ec5790406184895c600fe4724495bb6f6"
+  resolved "git+ssh://git@bitbucket.org/bazook/logger.git#a876b23ec5790406184895c600fe4724495bb6f6"
   dependencies:
     "@types/winston" "^2.3.9"
     chalk "^1.1.3"
