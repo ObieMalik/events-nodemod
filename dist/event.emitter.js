@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.EventEmitter = void 0;
 const Events = require("events");
 class GlobalEmitter {
     static get instance() {
@@ -9,5 +10,6 @@ class GlobalEmitter {
         return GlobalEmitter._instance;
     }
 }
-exports.EventEmitter = GlobalEmitter.instance;
+const eventEmitter = GlobalEmitter.instance;
+exports.EventEmitter = eventEmitter;
 //# sourceMappingURL=event.emitter.js.map

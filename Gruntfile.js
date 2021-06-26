@@ -1,8 +1,8 @@
-module.exports = function(grunt) {
-	grunt.loadNpmTasks("grunt-contrib-jshint");
+module.exports = function (grunt) {
 	grunt.loadNpmTasks("grunt-contrib-watch");
-	grunt.loadNpmTasks("grunt-tslint");
+	grunt.loadNpmTasks("grunt-eslint");
 	grunt.loadNpmTasks("grunt-ts");
+	grunt.loadNpmTasks("grunt-run");
 
 	grunt.initConfig({
 		concat: {
@@ -10,7 +10,7 @@ module.exports = function(grunt) {
 				separator: ';'
 			},
 			dist: {
-				src: ['build/**/*.js'],
+				src: ['dist/src/**/*.js'],
 				dest: 'dist/<%= pkg.name %>.js'
 			}
 		},
@@ -24,34 +24,57 @@ module.exports = function(grunt) {
 				}
 			}
 		},
-        jshint: {
-            files   : ['Gruntfile.js', 'package.json', 'src/server.js', 'lib/**/*.js', 'src/**/*.js'],
-            options: {
-                jshintrc: '.jshintrc'
-            }
-        },
-		tslint: {
+		eslint: {
 			options: {
-				configuration: "tslint.json",
-				force: false
+				configFile: ".eslintrc.json",
+				fix: grunt.option("fix")
 			},
-			all: {
-				src: ['src/**/*.ts']
+			target: [
+				'src/**/*.ts',
+				'test/**/*.ts'
+			]
+		},
+		watch: {
+			files: [
+				'src/**/*.ts',
+				'test/**/*.ts',
+				'!**/*.d.ts'
+			], // files to watch
+			tasks: [
+				'ts:build',
+				'eslint:all'
+			], // tasks to run
+			options: {
+				spawn: false // makes this task faster
 			}
 		},
-        watch: {
-            files   : ['src/**/*.ts'], // files to watch
-            tasks   : ['ts:build', 'tslint:all'], // tasks to run
-	        options: {
-            	spawn: false // makes this task faster
-	        }
-        },
-        ts: {
-            build: {
-                tsconfig: './tsconfig.json'
-            }
-        }
-    });
+		ts: {
+			build: {
+				tsconfig: './tsconfig.json'
+			}
+		},
+		run: {
+			test: {
+				cmd: 'jest',
+				args: [
+					'--config',
+					'jestconfig.json',
+					'NODE_ENV',
+					'development'
+				]
+			}
+		}
+	});
 
-    grunt.registerTask("default", ["tslint:all", "ts:build", "watch"]);
+	grunt.registerTask("default", [
+		"eslint",
+		"ts:build",
+		"run:test",
+		"watch"
+	]);
+
+	grunt.registerTask("test", [
+		"ts:build",
+		"run:test"
+	]);
 };

@@ -1,33 +1,42 @@
 {
-  "name": "@bazook/events",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "directories": {
-    "lib": "src"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "@bazook/errors": "git+ssh://git@bitbucket.org/bazook/errors.git",
-    "@bazook/logger": "git+ssh://git@bitbucket.org/bazook/logger.git",
-    "config": "^1.30.0",
-    "events": "^2.0.0",
-    "lodash": "^4.17.5"
-  },
-  "devDependencies": {
-    "@types/config": "0.0.31",
-    "@types/events": "^1.2.0",
-    "@types/lodash": "^4.14.107",
-    "grunt": "^1.0.2",
-    "grunt-contrib-jshint": "^1.0.0",
-    "grunt-contrib-watch": "^1.0.0",
-    "grunt-ts": "^6.0.0-beta.17",
-    "grunt-tslint": "^4.0.0",
-    "tslint": "^4.3.1",
-    "typescript": "^2.7.2"
-  }
+    "name": "@om-node/events",
+    "version": "1.0.0",
+    "description": "",
+    "main": "dist/src/index.js",
+    "types": "dist/src/index.d.ts",
+    "files": [
+        "dist"
+    ],
+    "directories": {
+        "lib": "src"
+    },
+    "author": "Obie Malik",
+    "license": "ISC",
+    "dependencies": {
+        "@om-node/errors": "https://github.com/obiemalik/node-errors.git",
+        "@om-node/logger": "https://github.com/obiemalik/node-logger.git",
+        "config": "^3.3.6",
+        "events": "^3.3.0",
+        "lodash": "^4.17.5"
+    },
+    "devDependencies": {
+        "@types/config": "0.0.38",
+        "@types/events": "^3.0.0",
+        "@types/jest": "^26.0.23",
+        "@types/lodash": "^4.14.107",
+        "@types/node": "^15.12.4",
+        "@typescript-eslint/eslint-plugin": "^4.28.0",
+        "@typescript-eslint/parser": "^4.28.0",
+        "eslint": "^7.29.0",
+        "eslint-config-google": "^0.14.0",
+        "grunt": "^1.0.2",
+        "grunt-contrib-watch": "^1.0.0",
+        "grunt-eslint": "^23.0.0",
+        "grunt-run": "^0.8.1",
+        "grunt-ts": "^6.0.0-beta.17",
+        "jest": "^27.0.5",
+        "ts-jest": "^27.0.3",
+        "typescript": "^4.3.4",
+        "typescript-eslint": "^0.0.1-alpha.0"
+    }
 }
