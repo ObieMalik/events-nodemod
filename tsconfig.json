@@ -1,20 +1,21 @@
 {
-	"compileOnSave"  : true,
+	"compileOnSave": true,
 	"compilerOptions": {
-		"sourceMap"    : true,
+		"sourceMap": true,
 		"inlineSources": true,
 		"noImplicitAny": true,
-		"target"       : "es6",
-		"module"       : "commonjs",
+		"target": "es6",
+		"module": "commonjs",
 		"experimentalDecorators": true,
 		"declaration": true,
 		"outDir": "dist",
-		"rootDir": "src"
+		"rootDir": "."
 	},
-	"include"        : [
-		"src/**/*.ts"
+	"include": [
+		"src/**/*.ts",
+		"test/**/*.ts"
 	],
-	"exclude"        : [
+	"exclude": [
 		"node_modules/**"
 	]
 }

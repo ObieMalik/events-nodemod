@@ -10,6 +10,10 @@
     "directories": {
         "lib": "src"
     },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/obiemalik/node-events.git"
+    },
     "author": "Obie Malik",
     "license": "ISC",
     "dependencies": {
